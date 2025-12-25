@@ -81,3 +81,6 @@ pip install -r requirements.txt
 
 # Run the server
 uvicorn app.main:app --reload
+```
+## Author
+Leandro Estrada
