@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+pydantic-settings~=2.6.1
+pyserial~=3.5
+beanie~=1.30.0
+pydantic~=2.10.3
+fastapi~=0.112.2
+motor~=3.7.1
+requests~=2.32.4
+websockets
+apscheduler
+httpx

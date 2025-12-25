@@ -1,0 +1,271 @@
+/* src/index.css */
+
+/* --- RESET BÁSICO Y FUENTE GLOBAL --- */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif; /* Fuente principal de la era Mosaic */
+  background-color: #c0c0c0; /* El clásico gris de las aplicaciones de los 90 */
+  color: #000;
+}
+
+/* --- ESTILO DE ENLACES --- */
+a {
+  color: #0000FF; /* Azul puro para los hipervínculos */
+  text-decoration: underline; /* Siempre subrayados */
+}
+
+a:hover {
+  color: #FF00FF; /* Magenta al pasar el mouse */
+}
+
+/* --- CLASES DE UTILIDAD PARA EL DISEÑO MOSAIC --- */
+
+/* Panel principal con borde "hacia afuera" */
+.mosaic-panel {
+  border: 2px solid;
+  border-color: #f0f0f0 #808080 #808080 #f0f0f0; /* Efecto 3D biselado */
+  background-color: #c0c0c0;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra sutil para darle profundidad */
+}
+
+/* Panel "hundido" o presionado */
+.mosaic-panel-inset {
+  border: 2px solid;
+  border-color: #808080 #f0f0f0 #f0f0f0 #808080; /* Efecto 3D inverso */
+  padding: 1rem;
+  background-color: #b9b9b9;
+  overflow-wrap: break-word;
+}
+
+
+/* Botón estándar estilo Windows 95 */
+.mosaic-button {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #f0f0f0 #808080 #808080 #f0f0f0;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.mosaic-button:active {
+  border-color: #808080 #f0f0f0 #f0f0f0 #808080; /* Se hunde al hacer clic */
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+
+/* Estilo para Títulos */
+.mosaic-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: block; /* Para que ocupe su propia línea */
+}
+
+/* src/index.css */
+
+/* --- (El código anterior permanece igual) --- */
+
+/* --- NUEVAS CLASES PARA BORDES DE TEXTO --- */
+
+/* La propiedad text-shadow nos permite simular un borde */
+/* Formato: [desplazamiento-x] [desplazamiento-y] [difuminado] [color] */
+
+.text-border-fuchsia {
+  font-weight: normal; /* Asegura que la letra no sea bold */
+  text-shadow:
+          -1px -1px 0 #FF00FF, /* arriba-izquierda */
+          1px -1px 0 #FF00FF, /* arriba-derecha */
+          -1px  1px 0 #FF00FF, /* abajo-izquierda */
+          1px  1px 0 #FF00FF; /* abajo-derecha */
+}
+
+.text-border-celeste {
+  font-weight: normal;
+  text-shadow:
+          -1px -1px 0 #00FFFF,
+          1px -1px 0 #00FFFF,
+          -1px  1px 0 #00FFFF,
+          1px  1px 0 #00FFFF;
+}
+
+.text-border-hacker-green {
+  font-weight: normal;
+  text-shadow:
+          -1px -1px 0 #00FF00,
+          1px -1px 0 #00FF00,
+          -1px  1px 0 #00FF00,
+          1px  1px 0 #00FF00;
+}
+
+/* Añadir esto al final de src/index.css */
+
+/* --- Estilos para el Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 500px;
+}
+
+/* --- Estilos para el Dashboard --- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric-display {
+  text-align: center;
+  padding: 1rem;
+}
+
+.metric-value {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace; /* Fuente de terminal retro */
+}
+
+.metric-label {
+  font-size: 18px;
+  margin-top: 0.5rem;
+}
+
+/* Colores de estado para CO2 */
+.status-good { background-color: #90ee90; } /* Verde claro */
+.status-regular { background-color: #ffd700; } /* Amarillo/Oro */
+.status-bad { background-color: #f08080; } /* Rojo claro */
+
+/* Añadir esto al final de src/index.css */
+
+/* --- Estilos para mensajes de validación --- */
+.error-message {
+  color: #a00000; /* Un rojo oscuro que resalta */
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Añadir esto al final de src/index.css */
+
+/* --- Estilo para icono de acción (editar) --- */
+.action-icon {
+  cursor: pointer;
+  font-size: 20px;
+  /* Efecto de borde sutil para que coincida con el texto */
+  text-shadow: -1px -1px 0 #808080, 1px -1px 0 #808080, -1px 1px 0 #808080, 1px 1px 0 #808080;
+}
+
+.action-icon:hover {
+  color: #0000FF; /* Azul al pasar el mouse */
+}
+
+/* Añadir esto al final de src/index.css */
+
+/* --- Estilos para Navegación Principal --- */
+.main-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #808080;
+  padding-bottom: 1rem;
+}
+
+/* --- Estilos para el Dashboard de Analítica --- */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Columna para listas y columna para el gráfico principal */
+  gap: 1.5rem;
+}
+
+.top-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.top-list li {
+  padding: 8px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.top-list li:last-child {
+  border-bottom: none;
+}
+
+.top-list strong {
+  color: #a00000; /* Rojo oscuro para resaltar el valor PPM */
+}
+
+/* Añadir esto al final de src/index.css */
+
+/* --- Estilos para la Página de Login --- */
+.login-container {
+  width: 400px;
+  margin: 5rem auto; /* Centrar en la página */
+}
+
+/* --- Estilos para el Modal de Confirmación (Borrado) --- */
+.confirmation-modal .modal-content {
+  width: 450px;
+}
+
+.confirmation-modal h3 {
+  color: #a00000;
+  margin-top: 0;
+}
+
+/* --- Estilos para Notificaciones --- */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  z-index: 2000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.notification.success {
+  background-color: #28a745; /* Verde */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Rojo */
+}
+
+/* --- Estilo para el icono de papelera --- */
+.delete-icon {
+  cursor: pointer;
+  color: #a00000;
+  font-size: 20px;
+}
+.delete-icon:hover {
+  color: #ff0000;
+}
+
+/* Estilos para el ranking en Analítica */
+.ranking-item {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.ranking-item:hover {
+  background-color: #e0e0e0;
+}
